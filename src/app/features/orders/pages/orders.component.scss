@@ -1,0 +1,15 @@
+.orders-page {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.order-card {
+  border-left: 4px solid #10386b;
+}
+
+.total {
+  margin-top: 0.8rem;
+  color: #10386b;
+  font-size: 1.1rem;
+}

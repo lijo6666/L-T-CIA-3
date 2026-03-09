@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "UltraBook Pro 14",
+    "description": "Lightweight productivity laptop with Intel Core i7, 16GB RAM, and 512GB SSD.",
+    "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=80",
+    "price": 89999,
+    "category": "Electronics",
+    "stock": 12,
+    "discountPercent": 10,
+    "releasedAt": "2025-01-15",
+    "rating": 4.6
+  },
+  {
+    "id": 2,
+    "name": "Noise-Canceling Headphones X",
+    "description": "Wireless over-ear headphones with active noise cancellation and 30-hour battery life.",
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+    "price": 14999,
+    "category": "Accessories",
+    "stock": 35,
+    "discountPercent": 22,
+    "releasedAt": "2024-11-03",
+    "rating": 4.4
+  },
+  {
+    "id": 3,
+    "name": "Smart Office Chair",
+    "description": "Ergonomic mesh office chair with lumbar support and recline lock.",
+    "imageUrl": "https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=1200&q=80",
+    "price": 21999,
+    "category": "Office",
+    "stock": 8,
+    "discountPercent": 15,
+    "releasedAt": "2024-08-20",
+    "rating": 4.2
+  },
+  {
+    "id": 4,
+    "name": "4K Smart Monitor 27",
+    "description": "27-inch 4K display with HDR support and USB-C connectivity.",
+    "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4d976431f5f?auto=format&fit=crop&w=1200&q=80",
+    "price": 32999,
+    "category": "Electronics",
+    "stock": 0,
+    "discountPercent": 25,
+    "releasedAt": "2025-04-10",
+    "rating": 4.7
+  },
+  {
+    "id": 5,
+    "name": "Air Purifier Max",
+    "description": "HEPA air purifier suitable for large rooms with real-time AQI display.",
+    "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1200&q=80",
+    "price": 11999,
+    "category": "Home",
+    "stock": 16,
+    "discountPercent": 5,
+    "releasedAt": "2024-07-02",
+    "rating": 4.1
+  },
+  {
+    "id": 6,
+    "name": "Mechanical Keyboard TKL",
+    "description": "Compact hot-swappable keyboard with RGB backlight and tactile switches.",
+    "imageUrl": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=1200&q=80",
+    "price": 6999,
+    "category": "Accessories",
+    "stock": 27,
+    "discountPercent": 18,
+    "releasedAt": "2024-09-12",
+    "rating": 4.5
+  }
+]

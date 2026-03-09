@@ -1,0 +1,60 @@
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  background: #102347;
+  color: #f8fbff;
+  box-shadow: 0 8px 30px rgba(16, 35, 71, 0.2);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.links {
+  justify-self: center;
+}
+
+.active-link {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.cart-link {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .brand {
+    grid-column: 1;
+  }
+
+  .cart-link {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .links {
+    grid-column: 1 / -1;
+    justify-self: start;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

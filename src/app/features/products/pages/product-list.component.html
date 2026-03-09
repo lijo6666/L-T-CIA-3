@@ -1,0 +1,54 @@
+<section class="hero">
+  <h1>Product Catalog</h1>
+  <p>Explore categories, check details, and add items to your cart.</p>
+</section>
+
+<section class="filters">
+  <mat-form-field appearance="outline">
+    <mat-label>Search products</mat-label>
+    <input matInput [(ngModel)]="searchTerm" placeholder="Type name or keyword" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <mat-select [(ngModel)]="selectedCategory">
+      <mat-option *ngFor="let category of categories$ | async" [value]="category">{{ category }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
+
+<section class="grid" *ngIf="products$ | async as products">
+  <article
+    class="product-card"
+    *ngFor="let product of products | productFilter: searchTerm : selectedCategory"
+    appProductStatus
+    [stock]="product.stock"
+    [discountPercent]="product.discountPercent"
+  >
+    <mat-card>
+      <img mat-card-image [src]="product.imageUrl" [alt]="product.name" />
+      <mat-card-header>
+        <mat-card-title>{{ product.name }}</mat-card-title>
+        <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p class="description">{{ product.description }}</p>
+        <p class="price">{{ product.price | currency: 'INR' }}</p>
+        <p class="meta">Released: {{ product.releasedAt | date }}</p>
+        <p class="meta" *ngIf="product.discountPercent > 0">Discount: {{ product.discountPercent }}%</p>
+        <p class="stock" [class.out-of-stock]="product.stock === 0">
+          {{ product.stock === 0 ? 'Out of stock' : (product.stock + ' in stock') }}
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" [routerLink]="['/products', product.id]">Details</button>
+        <button mat-flat-button color="accent" (click)="addToCart(product)" [disabled]="product.stock === 0">
+          Add to Cart
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </article>
+</section>

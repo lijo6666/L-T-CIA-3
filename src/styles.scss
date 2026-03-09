@@ -1,0 +1,20 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #1b2a42;
+  background: #f5f7fb;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
